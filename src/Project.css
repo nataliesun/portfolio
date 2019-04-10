@@ -1,0 +1,17 @@
+.Project {
+  margin-top: 35px;
+  width: 100%;
+  position: relative;
+
+}
+
+@media only screen and (min-width: 640px) {
+  .Project {
+    width: 33.2%;
+  }
+}
+
+.Project img {
+  width: 100%
+
+}
