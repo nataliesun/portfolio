@@ -1,0 +1,74 @@
+
+.AboutPage {
+  padding: 55px 30px 100px;
+  max-width: 1020px;
+  margin: 125px auto;
+}
+
+
+.AboutPage img {
+    width: 100%;
+
+}
+
+.split {
+    font-family: 'Lekton';
+    line-height: 1.5;
+    color: rgb(114, 113, 113);
+    margin: 35px 0;
+}
+
+.tech-lists {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tech-lists div {
+  width: 100%;
+}
+
+.tech-lists ul {
+  list-style-position: inside;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    .AboutPage .split-container {
+      display: flex;
+
+    }
+    
+    .split {
+      width: 50%;
+
+      
+    }
+    
+    .AboutPage img {
+      width: 350px;
+    }
+
+}
+
+.about-icons li img {
+  width: 50px;
+}
+
+.about-icons li {
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+.about-icons {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.hobbies {
+  margin-top: 45px;
+}
+

@@ -9,7 +9,7 @@ class PortfolioPage extends Component {
         return (
             <div className="content-container">
                 <Header page='main'/>
-                <ProjectList projects={this.props.projects}/>
+                <ProjectList />
             </div>
         );
     }

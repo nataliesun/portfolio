@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './CircleIcon.css';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -11,11 +12,11 @@ class CircleIcon extends Component {
                 <ul className="circles">
                     <li>
                         <div className="circle">
-                            <FontAwesomeIcon icon={faMobileAlt} /> 
+                            <FontAwesomeIcon icon={faMobileAlt} />
                             <p>Phone</p>
                         </div>
                         <p>+1(310)-382-6828</p>
-                      </li>
+                    </li>
                     <li>
                         <div className="circle">
                             <FontAwesomeIcon icon={faEnvelopeOpenText} />

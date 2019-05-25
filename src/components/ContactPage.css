@@ -1,4 +1,14 @@
+.ContactPage header {
+        max-width: 1020px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 125px;
+        margin-bottom: 35px;
+}
 
+.ContactPage {
+    padding-top: 55px;
+}
 .ContactPage form {
     position: absolute;
     top: 50%;
@@ -9,13 +19,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: "Lekton";
     /* margin-top: 25vh; */
     padding: 45px 35px 25px 35px;
-    background: rgba(255, 247, 247, 0.842);
+    /* background: rgba(255, 247, 247, 0.842); */
+    background: rgba(248, 248, 248, 0.65);
+    max-width: 1020px;
 }
 
-
+.form-container {
+    max-width: 1020px;
+    width: 100%;
+}
 
 
 .labels-container {
@@ -100,9 +116,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 247, 247, 0.842);
+    /* background: rgba(255, 247, 247, 0.842); */
     width: 100vw;
-    margin-left: -20px;
+    margin-left: -15px;
     height: 30vh;
     z-index: -11;
 }
@@ -126,7 +142,7 @@
     font-size: 34px;
     color: #CACAD6;
 
-    border: 2px solid rgb(218, 218, 218);
+    border: none;
     border-radius: 100%;
     width: calc(8vh);
 
@@ -150,6 +166,10 @@
     margin-top: 8px;
     font-family: "Lekton", sans-serif;
     color: rgb(158, 158, 158)
+}
+
+.right p {
+    margin-bottom: 15px;
 }
 
 

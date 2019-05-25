@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from './assets/Logo.png';
+import Logo from '../assets/Logo.png';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
@@ -9,7 +9,7 @@ class NavBar extends Component {
         const nav = document.querySelector('.nav-links');
         const navLinks = document.querySelectorAll('.nav-links li');
 
-        
+
         nav.classList.toggle('nav-active');
 
         navLinks.forEach((link, index) => {
@@ -25,10 +25,12 @@ class NavBar extends Component {
 
     }
     render() {
-    
+
         return (
             <nav className="NavBar">
-                <img src={Logo}alt="natalie-sun"/>
+                <NavLink to='/'>
+                    <img src={Logo} alt="natalie-sun" />
+                </NavLink>
                 <div className="burger" onClick={this.navSlide}>
                     <div className="line1"></div>
                     <div className="line2"></div>
@@ -36,17 +38,17 @@ class NavBar extends Component {
                 </div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to='/' onClick={this.navSlide}>
-                        Portfolio
+                        <NavLink to='/'>
+                            Portfolio
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/about' onClick={this.navSlide}>
+                        <NavLink to='/about' >
                             About
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/contact' onClick={this.navSlide}>
+                        <NavLink to='/contact'>
                             Contact
                         </NavLink>
                     </li>

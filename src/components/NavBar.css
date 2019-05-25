@@ -1,6 +1,5 @@
 .NavBar ul {
   list-style-type: none;
-  
 }
 
 .NavBar li {
@@ -32,10 +31,15 @@
 }
 
 .NavBar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
-  margin-top: 2vh;
   align-items: center;
+  max-width: 1100px;
+left: 50%;
+transform: translateX(-50%);
 }
 
 .NavBar img {
