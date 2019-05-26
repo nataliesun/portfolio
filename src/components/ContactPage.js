@@ -1,6 +1,7 @@
 import * as emailjs from 'emailjs-com';
 import React, { Component } from 'react';
 import Header from './Header';
+import beach from '../assets/icons/beach.jpg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -59,8 +60,7 @@ class ContactPage extends Component {
         return (
             <div className="ContactPage">
                 <Header page='contact' />
-                <img src="./assets/beach-sunrise.jpg
-                " alt="beach" id="banner" />
+                <img src={beach} alt="beach" id="banner" />
                 <CircleIcon />
                 <form>
                     <div className="form-container">

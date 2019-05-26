@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import nataliesun from '../assets/nataliesun.jpg';
+import surfing from '../assets/icons/surf.png';
+import volleyball from '../assets/icons/volleyball.png';
+import snowboarding from '../assets/icons/snowboarding.png';
 import './AboutPage.css';
 
 class AboutPage extends Component {
@@ -57,13 +60,13 @@ class AboutPage extends Component {
                             <h3>Hobbies:</h3>
                             <ul className="about-icons">
                                 <li datatype="surfing">
-                                    <img src='./assets/005-surf-1.png' alt="surfing" />
+                                    <img src={surfing} alt="surfing" />
                                 </li>
                                 <li datatype="volleyball">
-                                    <img src='./assets/004-volleyball.png' alt="surfing" />
+                                    <img src={volleyball} alt="volleyball" />
                                 </li>
                                 <li datatype="snowboarding">
-                                    <img src='./assets/003-snowboard.png' alt="snowboard" />
+                                    <img src={snowboarding} alt="snowboard" />
                                 </li>
                             </ul>
 
