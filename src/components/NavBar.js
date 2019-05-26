@@ -28,7 +28,7 @@ class NavBar extends Component {
 
         return (
             <nav className="NavBar">
-                <NavLink to='/'>
+                <NavLink to='/portfolio'>
                     <img src={Logo} alt="natalie-sun" />
                 </NavLink>
                 <div className="burger" onClick={this.navSlide}>
