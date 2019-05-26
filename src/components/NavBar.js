@@ -38,7 +38,7 @@ class NavBar extends Component {
                 </div>
                 <ul className="nav-links">
                     <li>
-                        <NavLink to='/'>
+                        <NavLink to='/portfolio'>
                             Portfolio
                         </NavLink>
                     </li>
