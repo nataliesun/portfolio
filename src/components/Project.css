@@ -30,6 +30,7 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  font-family: 'Lekton', sans-serif;
 }
 
 .Project:hover .image {

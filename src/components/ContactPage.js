@@ -5,7 +5,7 @@ import beach from '../assets/icons/beach.jpg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import './ContactPage.css'
 import CircleIcon from './CircleIcon';
@@ -21,18 +21,28 @@ class ContactPage extends Component {
 
     handleSubmitForm = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        const modal = document.getElementById('send-modal');
         this.setState({
             loading: true
         })
 
-        emailjs.send('sendgrid', 'template_f4iMq26t', this.state, 'user_KeO7FlZ4bJY35pYpiCOTi')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                console.log(this)
-            }, function (err) {
-                console.log('FAILED...', err);
-            });
+
+        const { name, email, message, subject } = this.state;
+
+        if (name && email && message && subject) {
+            emailjs.send('sendgrid', 'template_f4iMq26t', this.state, 'user_KeO7FlZ4bJY35pYpiCOTi')
+                .then((res) => {
+                    modal.style.display = 'block';
+                    this.setState({
+                        name: '',
+                        email: '',
+                        message: '',
+                        subject: '',
+                        loading: false
+                    });
+                })
+        }
+
     }
 
     handleUpdateName = (e) => {
@@ -55,13 +65,27 @@ class ContactPage extends Component {
             message: e.target.value
         })
     }
-    render() {
 
+    closeModal = () => {
+        const modal = document.getElementById('send-modal');
+        modal.style.display = 'none';
+    }
+
+
+    render() {
+        const airplane = <FontAwesomeIcon icon={faPaperPlane} size="sm" />
+        const spinner = <FontAwesomeIcon icon={faSpinner} spin size="sm" />
         return (
             <div className="ContactPage">
                 <Header page='contact' />
                 <img src={beach} alt="beach" id="banner" />
                 <CircleIcon />
+                <div className='modal' id='send-modal'>
+                    <span className="close" onClick={this.closeModal}>&times;</span>
+                    <h2>
+                        Sent!
+                    </h2>
+                </div>
                 <form>
                     <div className="form-container">
                         <div className="info-container">
@@ -74,16 +98,18 @@ class ContactPage extends Component {
                                 <input
                                     id="name"
                                     value={this.state.name}
-                                    onChange={this.handleUpdateName} />
+                                    onChange={this.handleUpdateName} required />
                                 <input
                                     id="email"
                                     value={this.state.email}
                                     onChange={this.handleUpdateEmail}
+                                    required
                                 />
                                 <input
                                     id="subject"
                                     value={this.state.subject}
                                     onChange={this.handleUpdateSubject}
+                                    required
                                 />
                             </div>
                         </div>
@@ -91,12 +117,14 @@ class ContactPage extends Component {
                             <label htmlFor="message">Message: </label>
                             <textarea
                                 id="message"
-                                value={this.state.subjmessageect}
+                                value={this.state.message}
                                 onChange={this.handleUpdateMessage}
                             />
                         </div>
-                        <button className="ui button" onClick={this.handleSubmitForm}>Send{" "}
-                            <FontAwesomeIcon icon={faPaperPlane} size="sm" />
+                        <button className="ui button send-btn" onClick={this.handleSubmitForm}>
+
+                            {!this.state.loading ? (<span>Send  {airplane} </span>
+                            ) : (<span>{spinner}</span>)}
                         </button>
 
                     </div>
