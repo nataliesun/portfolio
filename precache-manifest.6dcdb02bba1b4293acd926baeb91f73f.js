@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "d98c7bd95263d0e32234",
-    "url": "/portfolio/static/css/main.770b04a5.chunk.css"
+    "revision": "01fcb4c6e9cab05c9137",
+    "url": "/portfolio/static/css/main.4689a162.chunk.css"
   },
   {
-    "revision": "d98c7bd95263d0e32234",
-    "url": "/portfolio/static/js/main.ccb652ab.chunk.js"
+    "revision": "01fcb4c6e9cab05c9137",
+    "url": "/portfolio/static/js/main.1d803777.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "963f12907da582efafab",
-    "url": "/portfolio/static/js/2.de7b7770.chunk.js"
+    "revision": "b47fd17127766cae1891",
+    "url": "/portfolio/static/js/2.d7153807.chunk.js"
   },
   {
     "revision": "cb4a0c5277ed056aeeda10f37ac32c99",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/quizApp.4ba9d421.jpg"
   },
   {
-    "revision": "6c0d026c2d6597d7e5408716c10c9e38",
+    "revision": "6b42fb1d39edde4dee0b9cedd0e3b2ea",
     "url": "/portfolio/index.html"
   }
 ];
