@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "01fcb4c6e9cab05c9137",
-    "url": "/portfolio/static/css/main.4689a162.chunk.css"
+    "revision": "b71c87ed325bab14551d",
+    "url": "/portfolio/static/css/main.1f2b2634.chunk.css"
   },
   {
-    "revision": "01fcb4c6e9cab05c9137",
+    "revision": "b71c87ed325bab14551d",
     "url": "/portfolio/static/js/main.1d803777.chunk.js"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/quizApp.4ba9d421.jpg"
   },
   {
-    "revision": "6b42fb1d39edde4dee0b9cedd0e3b2ea",
+    "revision": "d5500366a4da1c6a8d1c66c281e89005",
     "url": "/portfolio/index.html"
   }
 ];
