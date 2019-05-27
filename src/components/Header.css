@@ -22,6 +22,11 @@ header {
     font-size: 72px;
 
   }
+  .Header h1 {
+      font-family: 'Playfair Display', serif;
+      height: 85px;
+      font-size: 72px;
+  }
 }
 
 @media only screen and (max-width: 471px) {
@@ -32,17 +37,18 @@ header {
     font-size: 42px;
     height: 65px;
 }
+
+  .Header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    height: 65px;
+  }
 }
 
 .subtitle {
   margin-top: 20px;
 }
 
-.Header h1 {
-    font-family: 'Playfair Display', serif;
-    height: 85px;
-    font-size: 72px;
-}
 
 
 

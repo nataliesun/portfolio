@@ -25,6 +25,20 @@
   justify-content: space-between;
 }
 
+@media screen and (max-width: 471px) {
+  .tech-lists {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tech-lists div {
+    margin-bottom: 35px;
+  }
+  .hobbies {
+    margin-top: 0px;
+  }
+
+}
+
 .tech-lists div {
   width: 100%;
 }
