@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b71c87ed325bab14551d",
-    "url": "/portfolio/static/css/main.1f2b2634.chunk.css"
+    "revision": "6cf22d9de5c2ee753d8a",
+    "url": "/portfolio/static/css/main.d3d83084.chunk.css"
   },
   {
-    "revision": "b71c87ed325bab14551d",
-    "url": "/portfolio/static/js/main.1d803777.chunk.js"
+    "revision": "6cf22d9de5c2ee753d8a",
+    "url": "/portfolio/static/js/main.ea2069ad.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
@@ -28,15 +28,15 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/beach.9f5f3e36.jpg"
   },
   {
-    "revision": "b6e5483fd116ee58fa28bd72535811f4",
-    "url": "/portfolio/static/media/forDrizzle.b6e5483f.jpg"
+    "revision": "20dda33af6f4c657d5c7fbd4014a3e62",
+    "url": "/portfolio/static/media/forDrizzle.20dda33a.jpg"
   },
   {
-    "revision": "4ba9d4210010a857c4becab2730f031c",
-    "url": "/portfolio/static/media/quizApp.4ba9d421.jpg"
+    "revision": "a3736bc00b31ea047bf3834b0ee0b4c5",
+    "url": "/portfolio/static/media/estateCloud.a3736bc0.jpg"
   },
   {
-    "revision": "d5500366a4da1c6a8d1c66c281e89005",
+    "revision": "843d341110cc7c0e51e133c9e9d1b626",
     "url": "/portfolio/index.html"
   }
 ];
