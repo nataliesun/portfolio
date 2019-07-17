@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Logo from '../assets/Logo.png';
 import { NavLink } from 'react-router-dom';
-import './NavBar.css';
+import './NavBar.scss';
 
 class NavBar extends Component {
+    state = {
+        prevScrollpos: window.pageYOffset,
+        visible: true
+    }
     navSlide = () => {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
@@ -24,10 +28,32 @@ class NavBar extends Component {
         burger.classList.toggle('toggle');
 
     }
-    render() {
 
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+
+    handleScroll = () => {
+        const { prevScrollpos } = this.state;
+
+        const currentScrollPos = window.pageYOffset;
+        const visible = prevScrollpos > currentScrollPos;
+
+        this.setState({
+            prevScrollpos: currentScrollPos,
+            visible
+        });
+    };
+
+
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+    render() {
+        const navClass = this.state.visible && this.state.prevScrollpos > 1 ? "NavBar" : this.state.visible ? "NavBar" : "NavBar NavBar__hidden";
         return (
-            <nav className="NavBar">
+            <nav className={navClass}>
                 <NavLink to='/portfolio'>
                     <img src={Logo} alt="natalie-sun" />
                 </NavLink>

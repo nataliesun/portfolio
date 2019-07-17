@@ -1,3 +1,29 @@
+.NavBar {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: top 0.3s;
+  height: 10vh;
+  border-radius: 10px;
+
+  img {
+    margin-left: 15px;
+  }
+}
+
+.NavBar__hidden {
+  top: -10vh !important;
+}
+
+
 .NavBar ul {
   list-style-type: none;
 }
@@ -30,18 +56,6 @@
   
 }
 
-.NavBar {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
 
 .NavBar img {
   max-height: 10vh;
