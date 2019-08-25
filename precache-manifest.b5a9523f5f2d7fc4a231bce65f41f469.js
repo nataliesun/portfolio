@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "5d46254ce223b59fa946",
-    "url": "/portfolio/static/css/main.d3d83084.chunk.css"
+    "revision": "9aafa99e21789f3ef378",
+    "url": "/portfolio/static/css/main.ea9cbbce.chunk.css"
   },
   {
-    "revision": "5d46254ce223b59fa946",
-    "url": "/portfolio/static/js/main.ee254979.chunk.js"
+    "revision": "9aafa99e21789f3ef378",
+    "url": "/portfolio/static/js/main.f713c392.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "b47fd17127766cae1891",
-    "url": "/portfolio/static/js/2.d7153807.chunk.js"
-  },
-  {
-    "revision": "cb4a0c5277ed056aeeda10f37ac32c99",
-    "url": "/portfolio/static/media/Logo.cb4a0c52.png"
+    "revision": "f84d14b6e9a6efea2353",
+    "url": "/portfolio/static/js/2.f8bbb82c.chunk.js"
   },
   {
     "revision": "390ccb6baff0b7616edf8c787db2d0ea",
@@ -36,7 +32,15 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/estateCloud.a3736bc0.jpg"
   },
   {
-    "revision": "9f4a6945c12c6e3fd5f3a35f45294ddf",
+    "revision": "44d80131d01e3622245550d33e9f4da6",
+    "url": "/portfolio/static/media/everest.44d80131.jpg"
+  },
+  {
+    "revision": "cb4a0c5277ed056aeeda10f37ac32c99",
+    "url": "/portfolio/static/media/Logo.cb4a0c52.png"
+  },
+  {
+    "revision": "9009891e34a27ae3f43437b13257a293",
     "url": "/portfolio/index.html"
   }
 ];
