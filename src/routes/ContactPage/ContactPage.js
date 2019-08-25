@@ -1,14 +1,14 @@
 import * as emailjs from 'emailjs-com';
 import React, { Component } from 'react';
-import Header from './Header';
-import beach from '../assets/icons/beach.jpg'
+import Header from '../../components/Header/Header';
+import beach from '../../assets/icons/beach.jpg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-import './ContactPage.css'
-import CircleIcon from './CircleIcon';
+import './ContactPage.scss'
+import CircleIcon from '../../components/CircleIcon/CircleIcon';
 
 class ContactPage extends Component {
     state = {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import nataliesun from '../assets/nataliesun.jpg';
-import surfing from '../assets/icons/surf.png';
-import volleyball from '../assets/icons/volleyball.png';
-import snowboarding from '../assets/icons/snowboarding.png';
+import Header from '../../components/Header/Header';
+import nataliesun from '../../assets/nataliesun.jpg';
+import surfing from '../../assets/icons/surf.png';
+import volleyball from '../../assets/icons/volleyball.png';
+import snowboarding from '../../assets/icons/snowboarding.png';
 import './AboutPage.css';
 
 class AboutPage extends Component {
@@ -18,7 +18,13 @@ class AboutPage extends Component {
                     </div>
                     <div className="split right">
                         <p>
-                            Hi, I’m Natalie! I’m a driven, versatile full-stack web developer and design enthusiast with expertise in React frontend and Node.js backend. I have professional experience in contracts and finance and have honed a diverse set of transferable skills in my business management career, including problem solving, project management, communications, and strategic planning—that have enriched my recent career change to web development.
+                            Hi, I’m Natalie! I’m a full-stack web developer and design enthusiast with expertise in React frontend and Node.js backend.
+                        </p>
+                        <p>
+                            Based in San Diego. Open to freelance projects and remote jobs.
+                        </p>
+                        <p>
+                            Lover of good food and drink.
                         </p>
                         <div className="tech-lists">
                             <div>
@@ -52,6 +58,7 @@ class AboutPage extends Component {
                                     <li>Terminal</li>
                                     <li>Heroku</li>
                                     <li>Zeit (Now)</li>
+                                    <li>SVN</li>
                                 </ul>
                             </div>
 

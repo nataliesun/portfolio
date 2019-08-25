@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Project from './Project';
+import Project from '../Project/Project';
 
-import forDrizzle from '../assets/forDrizzle.jpg';
-import estateCloud from '../assets/estateCloud.jpg';
+import forDrizzle from '../../assets/forDrizzle.jpg';
+import estateCloud from '../../assets/estateCloud.jpg';
+import everest from '../../assets/everest.jpg';
+
 
 import './ProjectList.scss';
 
@@ -19,6 +21,7 @@ class ProjectList extends Component {
 
                 <Project image={forDrizzle} title='For Drizzle' description="Javascript, jQuery, HTML5, CSS3, RestfulAPI" link="https://nataliesun.github.io/for-drizzle/" repo="https://github.com/nataliesun/estatecloud-app" />
 
+                <Project image={everest} title='Everest' description="React, Javascript, jQuery, HTML5, CSS3, Node, Express, Postgresql" link="https://everest.everest.now.sh" repo="https://www.github.com/mengqi89/everest-client" />
             </main>
         )
     }

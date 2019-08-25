@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-
-import NavBar from './components/NavBar';
-import AboutPage from './components/AboutPage';
-import ContactPage from './components/ContactPage'
-import PortfolioPage from './components/PortfolioPage';
+import AboutPage from '../../routes/AboutPage/AboutPage';
+import ContactPage from '../../routes/ContactPage/ContactPage'
+import PortfolioPage from '../../routes/PortfolioPage/PortfolioPage';
+import NavBar from '../NavBar/NavBar'
 
 import './App.css';
 

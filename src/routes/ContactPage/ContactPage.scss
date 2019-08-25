@@ -1,59 +1,82 @@
-.ContactPage header {
+@import '../../variables/variables.scss';
+
+.ContactPage {
+    padding-top: 55px;
+    header {
         max-width: 1020px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 125px;
         margin-bottom: 35px;
+    }
+    
+    form {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Lekton";
+        /* margin-top: 25vh; */
+        padding: 45px 35px 25px 35px;
+        /* background: rgba(255, 247, 247, 0.842); */
+        background: rgba(248, 248, 248, 0.65);
+        max-width: 1020px;
+    }
+
+    .form-container {
+        max-width: 1020px;
+        width: 100%;
+    }
+    .labels-container {
+        width: 100%;
+        display: flex; 
+    }
+    
+    .labels-container label {
+        width: 33.2%
+    }
+    
+    .input-container {
+        width: 100%;
+        display: flex; 
+    }
+    
+    .input-container input {
+        width: 33.2%;
+        margin-right: 25px; 
+        height: 25px;
+
+        &:focus {
+            outline-width: 0;
+        }
+    } 
+    
+    textarea {
+
+        &:focus {
+            outline-width: 0;
+        }
+    }
+
+    input, textarea {
+        border: 0px;
+        // border-radius: 10px;
+        padding: 10px 20px;
+        font-family: 'Lekton', sans-serif;
+        font-size: 1em;
+        background-color: rgba(255, 240, 238, 0.514);
+        border-color: Transparent; 
+    }
 }
 
-.ContactPage {
-    padding-top: 55px;
-}
-.ContactPage form {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Lekton";
-    /* margin-top: 25vh; */
-    padding: 45px 35px 25px 35px;
-    /* background: rgba(255, 247, 247, 0.842); */
-    background: rgba(248, 248, 248, 0.65);
-    max-width: 1020px;
-}
-
-.form-container {
-    max-width: 1020px;
-    width: 100%;
-}
 
 
-.labels-container {
-    width: 100%;
-    display: flex; 
-}
-
-.labels-container label {
-    width: 33.2%
-}
-
-.input-container {
-    width: 100%;
-    display: flex; 
-}
-
-.input-container input {
-    width: 33.2%;
-    margin-right: 25px; 
-    height: 25px;
-    border: 1px solid rgb(255, 252, 252);
-}
 
 .ContactPage form .message-container {
     width: 100%;
@@ -72,7 +95,6 @@
 .message-container textarea {
     margin-right: 25px;
     height: 85px;
-    border: 1px solid rgb(255, 252, 252);
 }
 
 .ContactPage button {
