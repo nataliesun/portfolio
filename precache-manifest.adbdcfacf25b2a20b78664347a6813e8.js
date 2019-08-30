@@ -1,27 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "d2a7b905d341e6de6b07",
-    "url": "/portfolio/static/css/main.d8f8df0e.chunk.css"
+    "revision": "6c17742358f8b83e34d0",
+    "url": "/portfolio/static/css/main.cde598c4.chunk.css"
   },
   {
-    "revision": "d2a7b905d341e6de6b07",
-    "url": "/portfolio/static/js/main.b3b66685.chunk.js"
+    "revision": "6c17742358f8b83e34d0",
+    "url": "/portfolio/static/js/main.f8f3f3d7.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "f84d14b6e9a6efea2353",
-    "url": "/portfolio/static/js/2.f8bbb82c.chunk.js"
+    "revision": "d6ce831ceafcab7f6a67",
+    "url": "/portfolio/static/js/2.5889b074.chunk.js"
   },
   {
     "revision": "390ccb6baff0b7616edf8c787db2d0ea",
     "url": "/portfolio/static/media/nataliesun.390ccb6b.jpg"
-  },
-  {
-    "revision": "9f5f3e36b1b6ce8a34e2b292ee1cd686",
-    "url": "/portfolio/static/media/beach.9f5f3e36.jpg"
   },
   {
     "revision": "20dda33af6f4c657d5c7fbd4014a3e62",
@@ -40,7 +36,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/Logo.cb4a0c52.png"
   },
   {
-    "revision": "d8b246e82b8ee18cba10742fe4ba1d63",
+    "revision": "fe57e1c8bc4f8c17c00589f6988ba4f4",
     "url": "/portfolio/index.html"
   }
 ];
