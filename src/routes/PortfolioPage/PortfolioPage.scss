@@ -8,3 +8,10 @@
   max-width: 1020px;
   margin: 150px auto 55px;
 }
+
+
+@media screen and (max-width: 735px) {
+  .PortfolioPage {
+    margin-top: 6em;
+  }
+}

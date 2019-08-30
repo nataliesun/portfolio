@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
-import './Header.css';
+import './Header.scss';
 
 import Typing from 'react-typing-animation';
 
 class Header extends Component {
+    state = { width: 0, height: 0 };
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
+
     render() {
         const greetings = ["Hello!", "こんにちは!", "Hola!", "안녕하세요!"];
         let content = '';
@@ -29,6 +43,19 @@ class Header extends Component {
                 <p className="subtitle">I'm Natalie a full-stack web developer.</p>
             </div>
         )
+
+        const mobile = (
+            <div className="Header">
+                <div className="greeting">
+                    <Typing cursorClassName="blue">
+                        <h1 id="typing">{greetings[0]}
+                        </h1>
+                    </Typing>
+                </div>
+                <p className="subtitle">I'm Natalie a full-stack web developer.</p>
+            </div>
+        )
+
         const about = (
             <div className="Header">
                 <h1>About Me</h1>
@@ -41,7 +68,10 @@ class Header extends Component {
         )
 
         if (this.props.page === 'main') {
-            content = main
+            if (this.state.width > 735) {
+                content = main
+            }
+            content = mobile
         } else if (this.props.page === 'about') {
             content = about
         } else {

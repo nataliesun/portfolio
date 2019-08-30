@@ -55,5 +55,22 @@
 }
 
 
+@media only screen and (max-width: 735px) {
+  .Project {
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    .project-description {
+      margin-top: 20px;
+      position: initial;
+      transform: initial;
+      opacity: 1;
+    }
+    &:hover > .image {
+      opacity: 1;
+    }
+  }
+}
+
 
 

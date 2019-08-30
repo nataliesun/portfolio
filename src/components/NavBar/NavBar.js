@@ -6,7 +6,8 @@ import './NavBar.scss';
 class NavBar extends Component {
     state = {
         prevScrollpos: window.pageYOffset,
-        visible: true
+        visible: true,
+        width: 0
     }
     navSlide = () => {
         const burger = document.querySelector('.burger');
@@ -30,7 +31,8 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener("scroll", this.handleScroll); this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
     }
 
     handleScroll = () => {
@@ -45,13 +47,24 @@ class NavBar extends Component {
         });
     };
 
-
-
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener('resize', this.updateWindowDimensions);
     }
+
+    updateWindowDimensions = () => {
+        this.setState({ width: window.innerWidth });
+    }
+
     render() {
-        const navClass = this.state.visible && this.state.prevScrollpos > 1 ? "NavBar" : this.state.visible ? "NavBar" : "NavBar NavBar__hidden";
+
+        const navClass = this.state.visible && this.state.prevScrollpos > 1
+            ? "NavBar"
+            : this.state.visible
+                ? "NavBar"
+                : this.state.width < 735
+                    ? "NavBar"
+                    : "NavBar NavBar__hidden";
         return (
             <nav className={navClass}>
                 <NavLink to='/portfolio'>
@@ -63,17 +76,17 @@ class NavBar extends Component {
                     <div className="line3"></div>
                 </div>
                 <ul className="nav-links">
-                    <li>
+                    <li onClick={this.navSlide}>
                         <NavLink to='/portfolio'>
                             Portfolio
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={this.navSlide}>
                         <NavLink to='/about' >
                             About
                         </NavLink>
                     </li>
-                    <li>
+                    <li onClick={this.navSlide}>
                         <NavLink to='/contact'>
                             Contact
                         </NavLink>
