@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
-import nataliesun from '../../assets/nataliesun.jpg';
+import nataliesun from '../../assets/images/nataliesun.jpg';
 import surfing from '../../assets/icons/surf.png';
 import volleyball from '../../assets/icons/volleyball.png';
 import snowboarding from '../../assets/icons/snowboarding.png';

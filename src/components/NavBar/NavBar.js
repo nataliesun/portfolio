@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Logo from '../../assets/Logo.png';
+import Logo from '../../assets/images/Logo.png';
 import { NavLink } from 'react-router-dom';
 import './NavBar.scss';
 
 class NavBar extends Component {
     state = {
-        prevScrollpos: window.pageYOffset,
-        visible: true,
         width: 0
     }
     navSlide = () => {
@@ -31,25 +29,15 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll); this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
+
     }
 
     handleScroll = () => {
-        const { prevScrollpos } = this.state;
 
-        const currentScrollPos = window.pageYOffset;
-        const visible = prevScrollpos > currentScrollPos;
-
-        this.setState({
-            prevScrollpos: currentScrollPos,
-            visible
-        });
     };
 
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
-        window.removeEventListener('resize', this.updateWindowDimensions);
+
     }
 
     updateWindowDimensions = () => {

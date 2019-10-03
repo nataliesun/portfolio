@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Project from '../Project/Project';
 
-import forDrizzle from '../../assets/forDrizzle.jpg';
-import estateCloud from '../../assets/estateCloud.jpg';
-import everest from '../../assets/everest.jpg';
+import forDrizzle from '../../assets/images/forDrizzle.jpg';
+import estateCloud from '../../assets/images/estateCloud.jpg';
+import everest from '../../assets/images/everest.jpg';
 
 
 import './ProjectList.scss';

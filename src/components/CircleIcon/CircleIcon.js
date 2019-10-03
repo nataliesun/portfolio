@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './CircleIcon.css';
+import './CircleIcon.scss';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

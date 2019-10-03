@@ -1,14 +1,10 @@
 import * as emailjs from 'emailjs-com';
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
-import beach from '../../assets/icons/beach.jpg'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-import './ContactPage.scss'
-import CircleIcon from '../../components/CircleIcon/CircleIcon';
+import './ContactPage.scss';
 
 class ContactPage extends Component {
     state = {
@@ -45,24 +41,9 @@ class ContactPage extends Component {
 
     }
 
-    handleUpdateName = (e) => {
+    handleInputUpdate = (e, inputName) => {
         this.setState({
-            name: e.target.value
-        })
-    }
-    handleUpdateEmail = (e) => {
-        this.setState({
-            email: e.target.value
-        })
-    }
-    handleUpdateSubject = (e) => {
-        this.setState({
-            subject: e.target.value
-        })
-    }
-    handleUpdateMessage = (e) => {
-        this.setState({
-            message: e.target.value
+            [inputName]: e.target.value
         })
     }
 
@@ -78,15 +59,14 @@ class ContactPage extends Component {
         return (
             <div className="ContactPage">
                 <Header page='contact' />
-                <img src={beach} alt="beach" id="banner" />
-                <CircleIcon />
                 <div className='modal' id='send-modal'>
                     <span className="close" onClick={this.closeModal}>&times;</span>
                     <h2>
                         Sent!
                     </h2>
                 </div>
-                <form>
+                <figure className="image" />
+                <form className="small-hide">
                     <div className="form-container">
                         <div className="info-container">
                             <div className="labels-container">
@@ -98,17 +78,17 @@ class ContactPage extends Component {
                                 <input
                                     id="name"
                                     value={this.state.name}
-                                    onChange={this.handleUpdateName} required />
+                                    onChange={(e) => this.handleInputUpdate(e, "name")} required />
                                 <input
                                     id="email"
                                     value={this.state.email}
-                                    onChange={this.handleUpdateEmail}
+                                    onChange={(e) => this.handleInputUpdate(e, "email")}
                                     required
                                 />
                                 <input
                                     id="subject"
                                     value={this.state.subject}
-                                    onChange={this.handleUpdateSubject}
+                                    onChange={(e) => this.handleInputUpdate(e, "subject")}
                                     required
                                 />
                             </div>
@@ -118,7 +98,7 @@ class ContactPage extends Component {
                             <textarea
                                 id="message"
                                 value={this.state.message}
-                                onChange={this.handleUpdateMessage}
+                                onChange={(e) => this.handleInputUpdate(e, "message")}
                             />
                         </div>
                         <button className="ui button send-btn" onClick={this.handleSubmitForm}>
@@ -129,7 +109,28 @@ class ContactPage extends Component {
 
                     </div>
                 </form>
+                <form className="small-show">
+                    <label>
+                        Name:
+                    </label>
+                    <input type="text" value={this.state.name}
+                        onChange={(e) => this.handleInputUpdate(e, "name")} />
+                    <label>
+                        Email:
+                    </label>
+                    <input type="email" value={this.state.email}
+                        onChange={(e) => this.handleInputUpdate(e, "email")} />
+                    <label>
+                        Message:
+                    </label>
+                    <textarea value={this.state.message}
+                        onChange={(e) => this.handleInputUpdate(e, "message")} />
+                    <button className="ui button send-btn" onClick={this.handleSubmitForm}>
 
+                        {!this.state.loading ? (<span>Send  {airplane} </span>
+                        ) : (<span>{spinner}</span>)}
+                    </button>
+                </form>
             </div>
         );
     }

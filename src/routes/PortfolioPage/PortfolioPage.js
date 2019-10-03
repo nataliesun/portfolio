@@ -9,6 +9,7 @@ class PortfolioPage extends Component {
         return (
             <div className="PortfolioPage">
                 <Header page='main' />
+
                 <ProjectList />
             </div>
         );

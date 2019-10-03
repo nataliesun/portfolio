@@ -11,7 +11,7 @@
   transform: translateX(-50%);
   z-index: 1000;
   transition: top 0.3s;
-  height: 6em;;
+  height: 6em;
   border-radius: 10px;
 
   img {
@@ -134,4 +134,10 @@
 nav {
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media screen and (max-width: 735px) {
+  .NavBar {
+    height: 4em;
+  }
 }

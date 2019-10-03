@@ -2,6 +2,12 @@
 
 .ContactPage {
     margin-top: 6em;
+
+    .image {
+        background-image: url('/aaron-burden-xG8IQMqMITM-unsplash.jpg');
+        background-size: 100% 100%;
+    }
+
     header {
         max-width: 1020px;
         margin-left: auto;
@@ -72,6 +78,10 @@
         font-size: 1em;
         background-color: rgba(255, 240, 238, 0.514);
         border-color: Transparent; 
+    }
+
+    .small-show {
+        display: none;
     }
 }
 
@@ -234,13 +244,21 @@
   animation: spin 2s linear infinite;
 }
 
-@keyframes spin {
-  /* 0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); } */
-}
-
 @media screen and (max-width: 735px) {
   .ContactPage {
-    margin-top: 6em;
+    margin-top: 2em;
+
+    .small-hide {
+        display: none;
+    }
+
+    .small-show {
+        display: flex;
+        margin-top: 20px;
+        label {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
   }
 }

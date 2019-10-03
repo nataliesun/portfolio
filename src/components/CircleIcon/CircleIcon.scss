@@ -1,0 +1,23 @@
+@media only screen and (max-width: 478px) {
+  .circles li p {
+
+    font-size: 12px;
+  }
+} 
+
+@media only screen and (max-width: 735px) {
+  .contact-icons {
+    .circles {
+      display: flex;
+      flex-direction: column;
+      margin-top: 60px;
+    }
+
+    .circle {
+      margin-top: 40px;
+      &:last-child {
+        margin-bottom: 200px;
+      }
+    }
+  }
+} 
