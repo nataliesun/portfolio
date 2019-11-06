@@ -1,6 +1,7 @@
 .NavBar {
   background: white;
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 100vw;
   display: flex;
@@ -44,7 +45,7 @@
   content: '';
   width: 0;
   height: 3px;
-  
+
   left: 0;
   bottom: -10px;
   transition: width 0.35s ease 0s;
@@ -53,7 +54,7 @@
 
 .NavBar li:hover::after {
   width: 100%;
-  
+
 }
 
 
@@ -68,10 +69,10 @@
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-    margin: 5px;
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
 }
 
 

@@ -15,7 +15,7 @@
         margin-top: 125px;
         margin-bottom: 35px;
     }
-    
+
     form {
         position: absolute;
         top: 50%;
@@ -35,34 +35,57 @@
         max-width: 1020px;
     }
 
+    .social {
+        max-width: 1020px;
+        margin: 0 auto;
+        font-family: 'Lekton';
+
+
+        a {
+            display: block;
+            font-size: 16px;
+            width: max-content;
+
+            &:last-child {
+                margin-top: 10px;
+            }
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+
     .form-container {
         max-width: 1020px;
         width: 100%;
     }
+
     .labels-container {
         width: 100%;
-        display: flex; 
+        display: flex;
     }
-    
+
     .labels-container label {
         width: 33.2%
     }
-    
+
     .input-container {
         width: 100%;
-        display: flex; 
+        display: flex;
     }
-    
+
     .input-container input {
         width: 33.2%;
-        margin-right: 25px; 
+        margin-right: 25px;
         height: 25px;
 
         &:focus {
             outline-width: 0;
         }
-    } 
-    
+    }
+
     textarea {
 
         &:focus {
@@ -70,14 +93,15 @@
         }
     }
 
-    input, textarea {
+    input,
+    textarea {
         border: 0px;
         // border-radius: 10px;
         padding: 10px 20px;
         font-family: 'Lekton', sans-serif;
         font-size: 1em;
         background-color: rgba(255, 240, 238, 0.514);
-        border-color: Transparent; 
+        border-color: Transparent;
     }
 
     .small-show {
@@ -156,7 +180,7 @@
 }
 
 .circles {
-    height:auto;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -236,29 +260,32 @@
 }
 
 .loader {
-  border: 12px solid #f3f3f3; /* Light grey */
-  border-top: 12px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  animation: spin 2s linear infinite;
+    border: 12px solid #f3f3f3;
+    /* Light grey */
+    border-top: 12px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 2s linear infinite;
 }
 
 @media screen and (max-width: 735px) {
-  .ContactPage {
-    margin-top: 2em;
+    .ContactPage {
+        margin-top: 2em;
 
-    .small-hide {
-        display: none;
-    }
+        .small-hide {
+            display: none;
+        }
 
-    .small-show {
-        display: flex;
-        margin-top: 20px;
-        label {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .small-show {
+            display: flex;
+            margin-top: 20px;
+
+            label {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
         }
     }
-  }
 }

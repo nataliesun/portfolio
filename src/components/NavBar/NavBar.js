@@ -5,8 +5,9 @@ import './NavBar.scss';
 
 class NavBar extends Component {
     state = {
-        width: 0
+        width: 0,
     }
+
     navSlide = () => {
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav-links');
@@ -15,13 +16,15 @@ class NavBar extends Component {
 
         nav.classList.toggle('nav-active');
 
-        navLinks.forEach((link, index) => {
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            }
-        });
+        if (this.state.width < 768) {
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+        }
 
         //burger animation
         burger.classList.toggle('toggle');
@@ -29,32 +32,22 @@ class NavBar extends Component {
     }
 
     componentDidMount() {
-
+        this.setState({ width: window.innerWidth });
+        window.addEventListener('resize', this.handlResize);
     }
-
-    handleScroll = () => {
-
-    };
 
     componentWillUnmount() {
-
+        window.removeEventListener('resize', this.handlResize);
     }
 
-    updateWindowDimensions = () => {
+    handlResize = () => {
         this.setState({ width: window.innerWidth });
     }
 
     render() {
 
-        const navClass = this.state.visible && this.state.prevScrollpos > 1
-            ? "NavBar"
-            : this.state.visible
-                ? "NavBar"
-                : this.state.width < 735
-                    ? "NavBar"
-                    : "NavBar NavBar__hidden";
         return (
-            <nav className={navClass}>
+            <nav className="NavBar">
                 <NavLink to='/portfolio'>
                     <img src={Logo} alt="natalie-sun" />
                 </NavLink>

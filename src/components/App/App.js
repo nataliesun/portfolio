@@ -6,6 +6,7 @@ import PortfolioPage from '../../routes/PortfolioPage/PortfolioPage';
 import NavBar from '../NavBar/NavBar'
 
 import './App.css';
+import StartPage from '../../routes/StartPage/StartPage';
 
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Route exact path='/' component={PortfolioPage} />
+        <Route exact path='/' component={StartPage} />
         <Route path='/portfolio' component={PortfolioPage} />
         <Route path='/about' component={AboutPage} />
         <Route path='/contact' component={ContactPage} />

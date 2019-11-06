@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 
 import './ContactPage.scss';
 
@@ -65,7 +67,10 @@ class ContactPage extends Component {
                         Sent!
                     </h2>
                 </div>
-                <figure className="image" />
+                <div className="social">
+                    <a href="https://github.com/nataliesun" target="_blank" rel="noopener noreferrer">Github <FontAwesomeIcon icon={faGithub} size="sm" /></a>
+                    <a href="https://www.linkedin.com/in/natalie-sun-159476142/" target="_blank" rel="noopener noreferrer">LinkedIn <FontAwesomeIcon icon={faLinkedin} size="sm" /></a>
+                </div>
                 <form className="small-hide">
                     <div className="form-container">
                         <div className="info-container">
