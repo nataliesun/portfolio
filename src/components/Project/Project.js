@@ -21,9 +21,9 @@ class Project extends Component {
                         </a>
                     </h3>
                     <p>{description}</p>
-                    <h4>
+                    {repo && <h4>
                         <a href={repo} target="_blank" rel="noopener noreferrer">Github</a>
-                    </h4>
+                    </h4>}
 
                 </div>
             </div>

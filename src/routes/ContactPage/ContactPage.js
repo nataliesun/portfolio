@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/Header';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
 import './ContactPage.scss';
@@ -67,10 +67,7 @@ class ContactPage extends Component {
                         Sent!
                     </h2>
                 </div>
-                <div className="social">
-                    <a href="https://github.com/nataliesun" target="_blank" rel="noopener noreferrer">Github <FontAwesomeIcon icon={faGithub} size="sm" /></a>
-                    <a href="https://www.linkedin.com/in/natalie-sun-159476142/" target="_blank" rel="noopener noreferrer">LinkedIn <FontAwesomeIcon icon={faLinkedin} size="sm" /></a>
-                </div>
+                <p>I'll be glad to answer your questions!</p>
                 <form className="small-hide">
                     <div className="form-container">
                         <div className="info-container">
@@ -136,6 +133,14 @@ class ContactPage extends Component {
                         ) : (<span>{spinner}</span>)}
                     </button>
                 </form>
+                <div className="social">
+                    {/* <p>I'm social!</p> */}
+                    <div className="icons-container">
+                        <a href="https://github.com/nataliesun" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubAlt} size="lg" /></a>
+                        <a href="https://www.linkedin.com/in/natalie-sun-159476142/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} size="lg" /></a>
+                    </div>
+
+                </div>
             </div>
         );
     }
